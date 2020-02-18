@@ -2,7 +2,7 @@ import pkg from './package'
 
 export default {
   mode: 'universal',
-
+  srcDir: 'app',
   /*
   ** Headers of the page
   */
@@ -15,7 +15,10 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+    ],
+    script: [
+      { src: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js' }
+    ],
   },
 
   /*
@@ -50,5 +53,8 @@ export default {
     */
     extend(config, ctx) {
     }
-  }
+  },
+  buildModules: [
+    '@nuxtjs/tailwindcss'
+  ]
 }
